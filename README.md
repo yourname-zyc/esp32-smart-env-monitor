@@ -67,3 +67,28 @@ void loop() {
   Serial.println("LED OFF");
   delay(500);
 }
+## 第 2 周：输入输出控制 + 项目骨架搭建
+
+### 本周完成内容
+- 按钮输入控制
+- 告警状态切换
+- LED 模拟告警输出
+- 串口打印当前状态
+- 初步函数模块化拆分
+
+### 当前系统逻辑
+1. 系统启动后初始化串口、LED 和按钮
+2. 程序循环读取按钮状态
+3. 按下按钮后切换告警开关状态
+4. 告警开启时，LED 快速闪烁
+5. 告警关闭时，LED 熄灭
+6. 串口输出当前状态
+
+### 当前函数说明
+- `initSerial()`：初始化串口
+- `initLed()`：初始化 LED
+- `initButton()`：初始化按钮
+- `readButton()`：读取按钮状态
+- `updateAlarmState()`：更新告警状态
+- `updateAlarmOutput()`：控制告警输出
+- `printSystemStatus()`：打印系统状态
