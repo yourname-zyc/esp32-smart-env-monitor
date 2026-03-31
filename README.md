@@ -92,3 +92,19 @@ void loop() {
 - `updateAlarmState()`：更新告警状态
 - `updateAlarmOutput()`：控制告警输出
 - `printSystemStatus()`：打印系统状态
+## 第 3 周：接入环境传感器，开始监测
+
+### 本周完成内容
+- 引入 DHT22 温湿度传感器
+- 建立环境数据结构 `EnvData`
+- 封装传感器读取函数
+- 加入数据有效性判断
+- 设计每 2 秒采样一次的数据采集流程
+
+### 数据结构
+```c
+typedef struct {
+    float temperature;
+    float humidity;
+    bool valid;
+} EnvData;
